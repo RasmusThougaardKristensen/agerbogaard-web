@@ -22,7 +22,7 @@ tools/build.py             regenerates site/ from design/ (keeps site/images)
 
 1. **Create the GitHub repo.** On github.com choose New repository, name it `agerbogaard-web`, and leave it empty (no README or .gitignore). Then run this from this folder:
    ```bash
-   git remote add origin https://github.com/<your-user>/agerbogaard-web.git
+   git remote add origin https://github.com/RasmusThougaardKristensen/agerbogaard-web.git
    git push -u origin main
    ```
    The first workflow run fails because the token isn't set yet. That's expected.
