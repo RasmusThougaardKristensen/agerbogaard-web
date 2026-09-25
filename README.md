@@ -1,23 +1,18 @@
 # Agerbo Vingaard – website
 
-Static multi-page site, deployed to **Azure Static Web Apps** by GitHub Actions on every push to `main`.
+Static one-page site, deployed to **Azure Static Web Apps** by GitHub Actions on every push to `main`.
 
-- One set of HTML for every screen size. Wider than 820 px: desktop layout. 820 px or narrower: mobile layout with the menu as a bottom tab bar.
+- One set of HTML for every screen size. Wider than 820 px: desktop layout. 820 px or narrower: mobile layout with the menu as a bottom tab bar. The menu links jump to sections on the page (`#vine`, `#vinsmagning`, `#bigaarden`, `#historien`, `#besog-os`).
 - Plain HTML/CSS, no framework and no build step. `site/` is the source: edit it directly. Fonts are self-hosted, and nothing loads from third parties.
 
 ```
 site/                      ← what gets deployed, and what you edit
-  index.html               Forside              → /
-  vine/index.html          Vores vine           → /vine
-  vinsmagning/index.html   Vinsmagning          → /vinsmagning
-  bigaarden/index.html     Honning og mjød      → /bigaarden
-  historien/index.html     Historien            → /historien
-  besog-os/index.html      Åbningstider/kontakt → /besog-os
+  index.html               the whole site: one H1, one H2 per section
   404.html                 "Siden findes ikke" (not indexed)
   styles.css               design tokens + layout (desktop and mobile)
-  site.js                  contact form (mailto)
+  site.js                  contact form (mailto) + highlights the menu item for the section in view
   robots.txt, sitemap.xml  for search engines
-  staticwebapp.config.json Azure routing: clean URLs, 301s from the old Weebly pages, real 404, caching, headers
+  staticwebapp.config.json Azure routing: 301s from the old Weebly pages to the matching section, real 404, caching, headers
   images/                  put hero.jpg, bier.jpg, besog.jpg here (see README inside)
   fonts/                   Caprasimo + Figtree (woff2)
 design/                    original Claude Design exports (reference only)
@@ -65,16 +60,16 @@ In the Static Web App go to *Custom domains → Add*. For `www.agerbogaard.dk`, 
 ## Everyday edits
 
 - **Photos:** add `hero.jpg`, `bier.jpg` and `besog.jpg` to `site/images/`, then commit and push. Until you do, placeholders show in their place. If a photo shows something other than what its `alt` text says, update the `alt` text in the HTML.
-- **Text:** edit the page's `index.html` in `site/`. Each text now exists only once, and it's used on both desktop and mobile.
-- **Header, menu and footer** are repeated in each of the 6 pages and in `404.html`. If you change them, change all 7 files (search and replace).
-- **News ("Nyt fra gården")** sits in the pink card on the front page and on `/besog-os`. Update or remove it when it's out of date, for example "September 2026".
-- **Opening hours** also appear in the structured data (`<script type="application/ld+json">` in `index.html` and `besog-os/index.html`). The seasonal hours are dated. Add the next season each year so Google shows the right hours.
-- **New page:** create `site/<name>/index.html` (copy an existing page), give it its own `<title>`, description, canonical and `<h1>`, add it to the menu in every page, and add the URL to `sitemap.xml`.
+- **Text:** edit `site/index.html`. Each text exists only once, and it's used on both desktop and mobile.
+- **Header, menu and footer** also appear in `404.html`. If you change them, change both files.
+- **News ("Nyt fra gården")** sits in the pink card near the top and again under *Åbningstider*. Update or remove it when it's out of date, for example "September 2026".
+- **Opening hours** also appear in the structured data (`<script type="application/ld+json">` in `index.html`). The seasonal hours are dated. Add the next season each year so Google shows the right hours.
+- **New section:** give it an `id`, an `<h2>`, and add a link to it in the menu in `index.html` and `404.html`.
 
 ## SEO checklist at launch
 
 1. Add both `www.agerbogaard.dk` and `agerbogaard.dk` as custom domains. Canonical tags, the sitemap and structured data all use **https://www.agerbogaard.dk**, so make that one the default and redirect the bare domain to it.
-2. The old Weebly URLs (`/vinsmagning.html`, `/kontakt.html` …) are 301-redirected in `staticwebapp.config.json`. Test a few after the domain switch.
+2. The old Weebly URLs (`/vinsmagning.html`, `/kontakt.html` …) are 301-redirected to the matching section in `staticwebapp.config.json`. Test a few after the domain switch.
 3. In Google Search Console: verify the domain, submit `https://www.agerbogaard.dk/sitemap.xml`, and check the *Pages* report over the following weeks.
 4. Make sure the Google Business Profile has the same address, phone and opening hours as the site.
 

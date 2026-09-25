@@ -340,7 +340,15 @@ a { color: var(--color-accent-700); }
 a:hover { color: var(--color-accent-900); }
 h1 { font-size: 44px; margin: 0 0 12px; }
 h2 { font-size: 30px; margin: 0 0 20px; }
-h2.h-sm { font-size: 20px; margin: 12px 0 4px; }
+.h-sm { font-size: 20px; margin: 12px 0 4px; }
+.section-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px; margin-bottom: 8px; }
+.section-head h2 { margin: 0; }
+.lead { max-width: 800px; }
+main p.lead { font-size: 16px; }
+.narrow { max-width: 800px; }
+.mt { margin-top: 24px; }
+.mt-lg { margin-top: 40px; }
+.h-sm.mt { margin-bottom: 14px; }
 main p { font-size: 15px; line-height: 1.7; margin: 0; }
 .small, main p.small { font-size: 13px; line-height: 1.6; }
 .muted { opacity: .75; }
@@ -356,8 +364,8 @@ main p { font-size: 15px; line-height: 1.7; margin: 0; }
 .brand { font-family: var(--font-heading); font-size: 19px; color: var(--color-text); text-decoration: none; }
 .site-nav { display: flex; gap: 24px; font: 600 13.5px var(--font-body); }
 .site-nav a { color: var(--color-text); text-decoration: none; }
-.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--color-accent-700); }
-.site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.site-nav a:hover, .site-nav a.is-active { color: var(--color-accent-700); }
+.site-nav a.is-active { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
 .site-nav .icn { display: none; }
 
 /* — sections — */
@@ -457,7 +465,9 @@ main > .section:last-child { padding-bottom: 48px; }
   :root { --gutter: 20px; --header-h: 52px; }
   h1 { font-size: 28px; line-height: 1.15; }
   h2 { font-size: 22px; margin-bottom: 14px; }
-  h2.h-sm { font-size: 18px; }
+  .h-sm { font-size: 18px; }
+  main p.lead { font-size: 15px; }
+  .mt-lg { margin-top: 28px; }
   main p { font-size: 14px; line-height: 1.6; }
   body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
 
@@ -471,7 +481,7 @@ main > .section:last-child { padding-bottom: 48px; }
   }
   .site-nav a { display: flex; flex-direction: column; align-items: center; gap: 3px;
     font-size: 9.5px; opacity: .6; text-align: center; white-space: nowrap; }
-  .site-nav a[aria-current="page"] { opacity: 1; text-decoration: none; }
+  .site-nav a.is-active { opacity: 1; text-decoration: none; }
   .site-nav .icn { display: block; }
 
   .hero { height: 260px; }
