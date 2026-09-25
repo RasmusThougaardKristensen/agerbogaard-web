@@ -97,11 +97,11 @@
   <a class="brand" href="/">Agerbo Vingaard</a>
   <nav class="site-nav" aria-label="Hovedmenu">
       <a href="#forside"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Forside</span></a>
-      <a href="#vine"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v6a4 4 0 0 0 8 0V3"/><path d="M12 13v8M9 21h6"/></svg><span>Vine</span></a>
-      <a href="#vinsmagning"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 9a4.5 4.5 0 0 1-9 0z"/><path d="M12 15v6M8 21h8"/></svg><span>Vinsmagning</span></a>
+      <a href="#vingaarden"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v6a4 4 0 0 0 8 0V3"/><path d="M12 13v8M9 21h6"/></svg><span>Vingården</span></a>
       <a href="#bigaarden"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M9 9h.01M15 9h.01M9 15c1 1 2 1.5 3 1.5s2-.5 3-1.5"/></svg><span>Bigården</span></a>
       <a href="#historien"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c3-1.5 6-1.5 8 0v14c-2-1.5-5-1.5-8 0z"/><path d="M20 5c-3-1.5-6-1.5-8 0v14c2-1.5 5-1.5 8 0z"/></svg><span>Historien</span></a>
-      <a href="#besog-os"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Besøg os</span></a>
+      <a href="#aabningstider"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span>Åbningstider</span></a>
+      <a href="#kontakt"><svg class="icn" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><span>Kontakt</span></a>
   </nav>
 </header>
 
@@ -120,7 +120,7 @@
     <div class="stack">
       <p>Tak fordi du ser forbi! Vi prøver at holde denne side opdateret med det sidste nye - nye årgange, nye events, sommermarked, nye legekammerater (læs: andres produkter).</p>
       <p>Det går af og til så stærkt at du ikke får det helt rigtige indtryk af hvad der rør sig på Agerbo Vingaard her på hjemmesiden. For at være helt sikker vil vi opfordre til at du besøger os.</p>
-      <p>På Agerbo Vingaard i Starreklinte, blot 300 meter fra Havnsø strand, dyrker vi Solaris og Cabernet Cantor og laver ca. 1.500–1.700 flasker vin om året. Vi har også vores egen bigård, hvor honning og mjød bliver til. Kig forbi gårdbutikken, eller book en vinsmagning.</p>
+      <p>På Agerbo Vingaard i Starreklinte, blot 300 meter fra Havnsø strand, dyrker vi Solaris og Cabernet Cantor og laver ca. 1.500–1.700 flasker vin om året. Vi har også vores egen bigård, hvor honning og mjød bliver til. Kig forbi gårdbutikken, eller <a href="#vinsmagning">book en vinsmagning</a>.</p>
       <p class="tagline">Fra fint og fornemt til jordnært og uhøjtideligt</p>
     </div>
     <div>
@@ -136,67 +136,66 @@
 
 <div class="divider" role="presentation"></div>
 
-<section class="section" id="vine">
+<section class="section" id="vingaarden">
   <div class="section-head">
-    <h2>Vores vine</h2>
+    <h2>Vingården</h2>
     <span class="tag tag-accent">1.500–1.700 flasker / år</span>
   </div>
   <p class="lead">I vinmarken er der plantet to druesorter, Solaris og Cabernet Cantor, i alt 1.700 stokke — et udbytte på ca. 1.500–1.700 flasker vin årligt, solgt på restauranter, i gårdbutikken og på markeder.</p>
-  <div class="grid-3 mt">
-    <article class="card wine">
+
+  <div class="accordion mt">
+    <details class="card card-white fold" id="vine">
+      <summary><span class="icon-box accent"><svg class="icn" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v6a4 4 0 0 0 8 0V3"/><path d="M12 13v8M9 21h6"/></svg></span><h3 class="card-title">Vores vine</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="fold-body">
+        <p>Vores tilgang til vin er ret simpel — det er naturen som guider os, og vi laver vinen som naturen vil det. Vi udnytter de elementer som allerede findes i marken, og forsøger hvert eneste år at fjerne så lidt som overhovedet muligt fra marken. Derved får markens økosystem lov til at arbejde uden vores manipulation. Det er ret simpelt.... Vi tror på at det giver en bedre og mere ren vin.</p>
+        <p>I vinmarken er der plantet to forskellige druesorter, Solaris og Cabernet Cantor. Solaris forvandler vi til hvidvin, og Cabernet Cantor til rosé. I alt har vi 1.700 stokke, hvilket giver et udbytte på ca. 1.500–1.700 flasker vin årligt. Produktionen er lille og eksklusiv.</p>
+        <div class="grid-3">
+          <article class="card wine">
         <div class="row"><h4 class="card-title">2023 Solaris Bobo</h4><span class="tag tag-accent">Hvidvin</span></div>
         <p class="card-body">Noter af melon, friske grønne æbler og hyldeblomst. Bør serveres ved 8–10 grader.</p>
         <div class="row wine-foot"><span class="muted small">Alkohol 12,5 %</span><span class="price">kr. 240,-</span></div>
       </article>
-    <article class="card wine">
+          <article class="card wine">
         <div class="row"><h4 class="card-title">2025 Solaris Bobo</h4><span class="tag tag-accent">Hvidvin</span></div>
         <p class="card-body">Allerede moden, fyldig og velbalanceret med noter af melon, friske grønne æbler og hyldeblomst. Bør serveres ved 8–10 grader. Passer godt til jomfruhummer, stegt hummer og friske fjordrejer.</p>
         <div class="row wine-foot"><span class="muted small">Alkohol 12 %</span><span class="price">kr. 230,-</span></div>
       </article>
-    <article class="card wine">
+          <article class="card wine">
         <div class="row"><h4 class="card-title">2025 Cabernet Cantor, Mojo</h4><span class="tag tag-accent-2">Rosé</span></div>
         <p class="card-body">En dyb rosé med smagen af dansk sommer og mange nuancer. Bør serveres ved 7–9 grader — som var det saftevand med alkohol.</p>
         <div class="row wine-foot"><span class="muted small">Alkohol 10 %</span><span class="price">kr. 240,-</span></div>
       </article>
-  </div>
-  <div class="card card-cta">
-    <p><strong>Bestil vin</strong> — ring eller skriv, så aftaler vi afhentning i gårdbutikken.</p>
-    <p class="actions"><a class="btn btn-primary" href="tel:+4523807427">Ring +45 23 80 74 27</a> <a class="btn btn-secondary" href="mailto:info@agerbogaard.dk?subject=Bestilling%20af%20vin">Skriv til os</a></p>
-  </div>
-  <div class="stack mt narrow">
-    <h3 class="h-sm">Sådan laver vi vin</h3>
-    <p>Vores tilgang til vin er ret simpel — det er naturen som guider os, og vi laver vinen som naturen vil det. Vi udnytter de elementer som allerede findes i marken, og forsøger hvert eneste år at fjerne så lidt som overhovedet muligt fra marken. Derved får markens økosystem lov til at arbejde uden vores manipulation. Det er ret simpelt.... Vi tror på at det giver en bedre og mere ren vin.</p>
-    <p>Solaris forvandler vi til hvidvin, og Cabernet Cantor til rosé. Produktionen er lille og eksklusiv.</p>
-  </div>
-</section>
-
-<div class="divider" role="presentation"></div>
-
-<section class="section" id="vinsmagning">
-  <h2>Vinsmagning på gården</h2>
-  <p class="lead">Vi er stolte af det vi laver, og vi viser det meget gerne frem. Vinsmagning afholdes efter aftale.</p>
-  <div class="grid-2 mt">
-    <div class="stack">
-      <p>Ring eller skriv gerne til os, om I er en større eller mindre gruppe som ønsker at komme forbi til en vinsmagning, markvandring, historiefortælling om dansk vin, eller blot en hyggelig dag på gården med god vin i glasset og eventuelt lækre tapasretter (tapas bestilles i god tid).</p>
-      <p>I vores åbningstid er det altid muligt at komme forbi og smage på vores vine, samt at få en snak med vinbonden.</p>
-      <p>Vi bor blot 300 meter fra vandet, så en dag ved vandet skal selvfølgelig afsluttes med en vinsmagning på Agerbo Vingaard.</p>
-      <h3 class="h-sm">Vinsmagning i sommerhuset eller til firmaarrangementet</h3>
-      <p>Ønsker I at afholde et event i sommerhuset eller til et firma arrangement så ring gerne til os, så kommer vi naturligvis til jer og afholder en vinsmagning.</p>
-    </div>
-    <div class="stack">
-      <div class="card card-green prices">
-        <h3 class="card-title">Sommer 2026 · priser</h3>
-        <p>Der betales for de flasker der åbnes/drikkes + <strong>kr. 125,-</strong> pr. deltager.</p>
-        <div class="rule"></div>
-        <div class="row"><span>Hjemmelavet landbrød (bestilles senest 2 dage før)</span><strong>kr. 35,-</strong></div>
-        <div class="row"><span>Tapas (bestilles senest 2 dage før)</span><strong>kr. 275,-</strong></div>
-        <p class="small muted">Har du andre ønsker, kontakt os gerne — vi skræddersyr dagen, så den passer til lige netop dét du ønsker.</p>
+        </div>
+        <p class="small">Ring eller skriv for at bestille — <a href="tel:+4523807427"><strong>+45 23 80 74 27</strong></a> · <a href="mailto:info@agerbogaard.dk?subject=Bestilling%20af%20vin"><strong>info@agerbogaard.dk</strong></a></p>
       </div>
-      <div class="card card-cta">
-        <p><strong>Book en vinsmagning</strong></p>
-        <p class="actions"><a class="btn btn-primary" href="tel:+4523807427">Ring +45 23 80 74 27</a> <a class="btn btn-secondary" href="mailto:info@agerbogaard.dk?subject=Vinsmagning">Skriv til os</a></p>
+    </details>
+
+    <details class="card card-white fold" id="vinbonden">
+      <summary><span class="icon-box accent-2"><svg class="icn" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><h3 class="card-title">Hvem er vinbonden</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="fold-body">
+        <p>Frank er den ansvarlige for driften på gården. Udover at passe vinmarken og bistaderne, laver Frank også gårdens honning og mjød.</p>
       </div>
-    </div>
+    </details>
+
+    <details class="card card-white fold" id="vinsmagning">
+      <summary><span class="icon-box accent-2"><svg class="icn" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-1.5 9a4.5 4.5 0 0 1-9 0z"/><path d="M12 15v6M8 21h8"/></svg></span><h3 class="card-title">Vinsmagning</h3><svg class="chev" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+      <div class="fold-body">
+        <p>Vi er stolte af det vi laver, og vi viser det meget gerne frem.</p>
+        <p>Vinsmagning afholdes efter aftale. Ring eller skriv gerne til os, om I er en større eller mindre gruppe som ønsker at komme forbi til en vinsmagning, markvandring, historiefortælling om dansk vin, eller blot en hyggelig dag på gården med god vin i glasset og eventuelt lækre tapasretter (tapas bestilles i god tid).</p>
+        <p>Ønsker I at afholde et event i sommerhuset eller til et firma arrangement så ring gerne til os, så kommer vi naturligvis til jer og afholder en vinsmagning.</p>
+        <p>I vores åbningstid er det altid muligt at komme forbi og smage på vores vine, samt at få en snak med vinbonden.</p>
+        <p>Vi bor blot 300 meter fra vandet, så en dag ved vandet skal selvfølgelig afsluttes med en vinsmagning på Agerbo Vingaard.</p>
+        <div class="card card-green prices">
+          <h4 class="card-title">Sommer 2026 · Vinsmagning — priser</h4>
+          <p>Der betales for de flasker der åbnes/drikkes + <strong>kr. 125,-</strong> pr. deltager.</p>
+          <div class="rule"></div>
+          <div class="row"><span>Hjemmelavet landbrød (bestilles senest 2 dage før)</span><strong>kr. 35,-</strong></div>
+          <div class="row"><span>Tapas (bestilles senest 2 dage før)</span><strong>kr. 275,-</strong></div>
+          <p class="small muted">Har du andre ønsker, kontakt os gerne — vi skræddersyr dagen, så den passer til lige netop dét du ønsker.</p>
+        </div>
+        <p class="actions"><a class="btn btn-primary" href="tel:+4523807427">Ring og book</a> <a class="btn btn-secondary" href="mailto:info@agerbogaard.dk?subject=Vinsmagning">Skriv til os</a></p>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -226,8 +225,6 @@
       <p>En stor del af fortællingen om Agerbogaard handler om mennesker. Mennesker som tør drømme stort og leve livet. Som det mest naturlige har Frank og Betina igennem mange år haft plejebørn boende på Agerbogaard. Børnene har haft en stor indflydelse på hverdagen på gården. De er en del af fortællingen om to mennesker, med kærlighed til hinanden og til livet på Agerbogaard.</p>
       <p>Der hører 2 tdr. land til Agerbogaard og i de første år fungerede jorden som hestefolde.</p>
       <p>I december 2020 flyttede sønnen Tobias, hans hustru Line og deres 2 drenge ind, og i 2021 flyttede Franks far, Henning, ind på gården.</p>
-      <h3 class="h-sm">Hvem er vinbonden</h3>
-      <p>Frank er den ansvarlige for driften på gården. Udover at passe vinmarken og bistaderne, laver Frank også gårdens honning og mjød.</p>
     </div>
     <div class="stack">
       <h3 class="h-sm">Hvordan opstod ideen om at lave en vingård?</h3>
@@ -288,7 +285,7 @@
   <div>
     <div class="brand">Agerbo Vingaard</div>
     <p class="small muted">Nekseløvej 13, Starreklinte, 4534 Hørve · <a href="tel:+4523807427">+45 23 80 74 27</a> · <a href="mailto:info@agerbogaard.dk">info@agerbogaard.dk</a></p>
-    <nav class="footer-nav small" aria-label="Sider"><a href="#forside">Forside</a> <a href="#vine">Vine</a> <a href="#vinsmagning">Vinsmagning</a> <a href="#bigaarden">Bigården</a> <a href="#historien">Historien</a> <a href="#besog-os">Besøg os</a></nav>
+    <nav class="footer-nav small" aria-label="Sider"><a href="#forside">Forside</a> <a href="#vingaarden">Vingården</a> <a href="#bigaarden">Bigården</a> <a href="#historien">Historien</a> <a href="#aabningstider">Åbningstider</a> <a href="#kontakt">Kontakt</a></nav>
   </div>
   <div class="social"><a href="https://www.facebook.com/search/top?q=agerbo%20vingaard" aria-label="Agerbo Vingaard på Facebook" rel="noopener"><svg class="icn" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h2.6l.9-4H13V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://www.instagram.com/agerbo_gaard/" aria-label="Agerbo Vingaard på Instagram" rel="noopener"><svg class="icn" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a></div>
 </footer>

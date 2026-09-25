@@ -20,3 +20,12 @@ document.querySelectorAll('.contact-form').forEach(function (f) {
   }, { rootMargin: '-40% 0px -55% 0px' });
   links.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) obs.observe(s); });
 })();
+// Links to a collapsed panel (e.g. /#vinsmagning or an old Weebly URL redirected there) open it.
+(function () {
+  function openFromHash() {
+    var el = location.hash && document.getElementById(location.hash.slice(1));
+    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+})();

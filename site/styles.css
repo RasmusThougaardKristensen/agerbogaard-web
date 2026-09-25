@@ -451,6 +451,21 @@ main > .section:last-child { padding-bottom: 48px; }
 
 .notfound { min-height: 50vh; }
 
+/* — collapsible panels (Vingården) — */
+.accordion { display: flex; flex-direction: column; gap: 12px; max-width: 900px; }
+.fold { padding: 0; overflow: hidden; gap: 0; }
+.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 16px; }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary .card-title { flex: 1; margin: 0; font-size: 15px; }
+.fold > summary .chev { flex: none; color: var(--color-accent-700); transition: transform .15s ease; }
+.fold[open] > summary .chev { transform: rotate(180deg); }
+.fold > summary:hover .card-title { color: var(--color-accent-700); }
+.fold-body { padding: 0 16px 22px 64px; display: flex; flex-direction: column; gap: 12px; }
+.fold-body p { font-size: 14px; }
+.fold .wine { background: var(--color-neutral-100); }
+.fold .grid-3 { gap: 14px; }
+.fold .actions { margin-top: 4px !important; }
+
 /* — footer — */
 .site-footer { padding: 28px var(--gutter) 40px; border-top: 1px solid var(--color-neutral-300);
   display: flex; justify-content: space-between; align-items: center; gap: 24px; }
@@ -494,5 +509,7 @@ main > .section:last-child { padding-bottom: 48px; }
   .grid-2, .grid-2.tight, .grid-3 { grid-template-columns: 1fr; gap: 20px; }
   .img-md { height: 200px; }
   .img-sm { height: 160px; }
+  .fold > summary { padding: 14px; gap: 10px; }
+  .fold-body { padding: 0 14px 18px 14px; }
   .site-footer { flex-direction: column; align-items: flex-start; padding: 20px var(--gutter) 32px; }
 }

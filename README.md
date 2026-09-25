@@ -2,7 +2,7 @@
 
 Static one-page site, deployed to **Azure Static Web Apps** by GitHub Actions on every push to `main`.
 
-- One set of HTML for every screen size. Wider than 820 px: desktop layout. 820 px or narrower: mobile layout with the menu as a bottom tab bar. The menu links jump to sections on the page (`#vine`, `#vinsmagning`, `#bigaarden`, `#historien`, `#besog-os`).
+- One set of HTML for every screen size. Wider than 820 px: desktop layout. 820 px or narrower: mobile layout with the menu as a bottom tab bar. The menu links jump to sections on the page (`#vingaarden`, `#bigaarden`, `#historien`, `#aabningstider`, `#kontakt`). Inside *Vingården*, "Vores vine", "Hvem er vinbonden" and "Vinsmagning" are collapsible panels (`<details>`). Their text is in the HTML, so Google indexes it even when a panel is closed. A link to `/#vine`, `/#vinbonden` or `/#vinsmagning` opens that panel.
 - Plain HTML/CSS, no framework and no build step. `site/` is the source: edit it directly. Fonts are self-hosted, and nothing loads from third parties.
 
 ```
@@ -10,7 +10,7 @@ site/                      ← what gets deployed, and what you edit
   index.html               the whole site: one H1, one H2 per section
   404.html                 "Siden findes ikke" (not indexed)
   styles.css               design tokens + layout (desktop and mobile)
-  site.js                  contact form (mailto) + highlights the menu item for the section in view
+  site.js                  contact form (mailto), menu highlight for the section in view, opens a panel when linked to
   robots.txt, sitemap.xml  for search engines
   staticwebapp.config.json Azure routing: 301s from the old Weebly pages to the matching section, real 404, caching, headers
   images/                  put hero.jpg, bier.jpg, besog.jpg here (see README inside)

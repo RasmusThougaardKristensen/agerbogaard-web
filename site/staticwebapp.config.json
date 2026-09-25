@@ -7,7 +7,7 @@
     },
     {
       "route": "/vingaringrden.html",
-      "redirect": "/#vine",
+      "redirect": "/#vingaarden",
       "statusCode": 301
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "route": "/hvem-er-vinbonden.html",
-      "redirect": "/#historien",
+      "redirect": "/#vinbonden",
       "statusCode": 301
     },
     {
