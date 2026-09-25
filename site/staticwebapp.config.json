@@ -1,21 +1,32 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/images/*", "/fonts/*", "/*.css", "/*.js", "/*.svg"]
-  },
-  "responseOverrides": {
-    "404": { "rewrite": "/404.html" }
-  },
+  "trailingSlash": "never",
   "routes": [
-    { "route": "/fonts/*", "headers": { "cache-control": "public, max-age=31536000, immutable" } },
+    { "route": "/index.html",                    "redirect": "/",            "statusCode": 301 },
+    { "route": "/vingaringrden.html",            "redirect": "/vine",        "statusCode": 301 },
+    { "route": "/vores-vine.html",               "redirect": "/vine",        "statusCode": 301 },
+    { "route": "/druesorter.html",               "redirect": "/vine",        "statusCode": 301 },
+    { "route": "/vinsmagning.html",              "redirect": "/vinsmagning", "statusCode": 301 },
+    { "route": "/bigaringrden.html",             "redirect": "/bigaarden",   "statusCode": 301 },
+    { "route": "/hvem-er-vinbonden.html",        "redirect": "/historien",   "statusCode": 301 },
+    { "route": "/historien-om-agerbogaard.html", "redirect": "/historien",   "statusCode": 301 },
+    { "route": "/besoslashg-os.html",            "redirect": "/besog-os",    "statusCode": 301 },
+    { "route": "/aringbningstider.html",         "redirect": "/besog-os",    "statusCode": 301 },
+    { "route": "/kontakt.html",                  "redirect": "/besog-os",    "statusCode": 301 },
+    { "route": "/ny-side2.html",                 "redirect": "/",            "statusCode": 301 },
+    { "route": "/fonts/*",  "headers": { "cache-control": "public, max-age=31536000, immutable" } },
     { "route": "/images/*", "headers": { "cache-control": "public, max-age=604800" } }
   ],
+  "responseOverrides": {
+    "404": { "rewrite": "/404.html", "statusCode": 404 }
+  },
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "X-Frame-Options": "SAMEORIGIN"
   },
   "mimeTypes": {
-    ".woff2": "font/woff2"
+    ".woff2": "font/woff2",
+    ".xml": "application/xml",
+    ".txt": "text/plain"
   }
 }
